@@ -1,0 +1,82 @@
+[
+    {
+        "key": "group_5d5c0a528daa0",
+        "title": "Events group 1",
+        "fields": [
+            {
+                "key": "field_5d5c0a71bce27",
+                "label": "Events",
+                "name": "events",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5d5c0ad6bce28",
+                        "label": "Event Date",
+                        "name": "event_date",
+                        "type": "date_picker",
+                        "instructions": "Select date and time",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "m-d-Y",
+                        "return_format": "m-d-Y",
+                        "first_day": 0
+                    },
+                    {
+                        "key": "field_5d5c0b04bce29",
+                        "label": "Event data",
+                        "name": "event_data",
+                        "type": "wysiwyg",
+                        "instructions": "Write the event content",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
