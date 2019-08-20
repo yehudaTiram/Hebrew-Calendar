@@ -72,7 +72,7 @@ class Heb_Calendar_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/heb-calendar-public.js', array( 'jquery' ), rand( 1, 99999999999 ), false );
+		//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/heb-calendar-public.js', array( 'jquery' ), rand( 1, 99999999999 ), false );
 		wp_register_script( 'modernizer-js', plugin_dir_url( __FILE__ ) . '/js/modernizr.custom.63321.js', array('jquery'), rand( 1, 99999999999 ), false );
 		wp_enqueue_script( 'calendario-js', plugin_dir_url( __FILE__ ) . 'js/jquery.calendario.js', array( 'modernizer-js' ), rand( 1, 99999999999 ), false );
 
