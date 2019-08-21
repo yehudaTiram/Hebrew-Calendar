@@ -10,6 +10,18 @@ This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent arti
 
 - Import the file acf-export-2019-08-20.json (in the plugin root) into ACF to create the fields needed for the calendar.
 
+## Put this html in the page where you want the calendar to appear
+```
+<div class="custom-calendar-wrap">
+    <div id="custom-inner" class="custom-inner">
+        <div class="custom-header clearfix">
+            <nav><span id="custom-prev" class="custom-prev"></span><span id="custom-next" class="custom-next"></span></nav>
+            <h2 id="custom-month" class="custom-month"></h2>
+            <h3 id="custom-year" class="custom-year"></h3></div>
+        <div id="calendar" class="fc-calendar-container"></div>
+    </div>
+</div>
+```
 <div dir='rtl' align='right'>
 הסבר קצר איך להתקין את התוסף מגיטהאב.
 ראשית, קחו בחשבון שהתקנה של תוספים שלא מתוך הריפוזיטורי הרשמי של וורדפרס היא דבר לא רצוי. אני מציין את זה למרות שזה בניגוד לשיתוף של הקוד שאני מציע כי זה נושא חשוב ביותר.
@@ -29,7 +41,7 @@ This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent arti
 בחר את הקובץ וייבא אותו. זה ייצור את השדות המתאימים
 
 קוד בדף
-בדף שבו בחרת להציב את לוח השנה הכנס את הקוד הבא
+## בדף שבו בחרת להציב את לוח השנה הכנס את הקוד הבא
  </div>
 
 ## Put this html in the page where you want the calendar to appear
