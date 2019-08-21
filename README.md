@@ -1,5 +1,5 @@
 # Hebrew Calendar with ACF PRO
-This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent article at
+This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent article at 
 <a href="https://he.savvy.co.il/blog/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1/display-events-on-hebrew-calendar-wordpress/" target="_blank">`https://he.savvy.co.il/blog/%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1/display-events-on-hebrew-calendar-wordpress/`</a>.
 
 ## How to use
