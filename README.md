@@ -6,9 +6,9 @@ This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent arti
 
 - Download this repo and install it on your Wordpress site 
 
-- You need to install ACF Pro in order to use it.
+- Install ACF Pro in order to use it.
 
-- You need to import the file acf-export-2019-08-20.json (in the plugin root) into ACF to create the fields needed for the calendar.
+- Import the file acf-export-2019-08-20.json (in the plugin root) into ACF to create the fields needed for the calendar.
 
 ## Put this html in the page where you want the calendar to appear
 ```
