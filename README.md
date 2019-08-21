@@ -21,9 +21,10 @@ This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent arti
         <div id="calendar" class="fc-calendar-container"></div>
     </div>
 </div>
+
+## <p dir='rtl' align='right'>הסבר קצר איך להתקין את התוסף מגיטהאב.</p>
 ```
 <div dir='rtl' align='right'>
-הסבר קצר איך להתקין את התוסף מגיטהאב.
 ראשית, קחו בחשבון שהתקנה של תוספים שלא מתוך הריפוזיטורי הרשמי של וורדפרס היא דבר לא רצוי. אני מציין את זה למרות שזה בניגוד לשיתוף של הקוד שאני מציע כי זה נושא חשוב ביותר.
 מעבר לכך אין כל אחריות על הקוד מצידי. בבדיקות שלי הוא עובד יפה מאוד אבל ההתקנה היא באחריותך בלבד.
 
