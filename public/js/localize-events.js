@@ -1,9 +1,7 @@
 (function( $ ) {
 	'use strict';
 	$(document).ready(function() {
-		$( '#calendar' ).calendario();
-	  });
-	
+        $('#calendar').calendario();
 $(function () {
 
     var x = acf_vars.my_localized_var,
@@ -76,7 +74,10 @@ $(function () {
         }
 
     }
-});
+});        
+	  });
+	
+
 
 })( jQuery );
 

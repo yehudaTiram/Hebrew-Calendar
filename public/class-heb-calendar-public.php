@@ -54,6 +54,7 @@ class Heb_Calendar_Public {
 
 	}
 
+
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *
