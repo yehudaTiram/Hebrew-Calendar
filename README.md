@@ -10,7 +10,7 @@ This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent arti
 
 - Import the file acf-export-2019-08-20.json (in the plugin root) into ACF to create the fields needed for the calendar.
 
-- Get the page ID where you're going to add the calendar. Go to admin->Settings->heb-calendar and write the ID in "The pages IDs" field. If you are going to use it in more than 1 page' just separate the IDs with commas eg 12,18,25 
+- Get the page ID where you're going to add the calendar. Go to admin->Settings->heb-calendar and write the ID in "The pages IDs" field. If you are going to use it in more than 1 page, just separate the IDs with commas eg 12,18,25 
 
 ## Put this html in every page where you want the calendar to appear
 ```
@@ -31,7 +31,7 @@ This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent arti
 ראשית, קחו בחשבון שהתקנה של תוספים שלא מתוך הריפוזיטורי הרשמי של וורדפרס היא דבר לא רצוי. אני מציין את זה למרות שזה בניגוד לשיתוף של הקוד שאני מציע כי זה נושא חשוב ביותר.
 מעבר לכך אין כל אחריות על הקוד מצידי. בבדיקות שלי הוא עובד יפה מאוד אבל ההתקנה היא באחריותך בלבד.
 
-התקנה:
+## התקנה:
 1.	יש להתקין ACF PRO באתר שלך
 2.	להוריד את התוסף מגיטהאב למחשב שלך כקובץ ZIP
 3.	לשנות את שם הקובץ שהורדת ל heb-calendar.zip
@@ -39,15 +39,16 @@ This simple Wordpress ACF calendar plugin is based on Roee Yossef excellent arti
 5.	העלה את הקובץ והתקן
 6.	הפעל את התוסף
 
-יצירת השדות 
+## יצירת השדות 
 1.	חלץ את הקובץ acf-export-2019-08-20.json מקובץ הזיפ שהורדתושמור במחשב
 2.	בניהול האתר -> שדות מיוחדים -> כלים -> יבוא קבוצת שדות 
 בחר את הקובץ וייבא אותו. זה ייצור את השדות המתאימים
 
-הגדרות 
-## בדף הגדרות התוסף admin->Settings->heb-calendar כתוב את מספרי הדפים שבהם יוצב הקוד והפרד ביניהם בפסיקים. לדוגמא 12,18,25
-קוד בדף
-## בדף או בדפים שבהם בחרת להציב את לוח השנה הכנס את הקוד הבא
+## הגדרות 
+בדף הגדרות התוסף admin->Settings->heb-calendar כתוב את מספרי הדפים שבהם יוצב הקוד והפרד ביניהם בפסיקים. לדוגמא 12,18,25
+
+## קוד בדף
+בדף או בדפים שבהם בחרת להציב את לוח השנה הכנס את הקוד הבא
  </div>
 
 ## Put this html in the page where you want the calendar to appear
