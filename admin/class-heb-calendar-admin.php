@@ -18,7 +18,7 @@
  *
  * @package    Heb_Calendar
  * @subpackage Heb_Calendar/admin
- * @author     Yehuda Tiram, Roi Yosef <yehuda@atarimtr.co.il>
+ * @author     Yehuda Tiram <yehuda@atarimtr.co.il>
  */
 class Heb_Calendar_Admin {
 
@@ -51,7 +51,8 @@ class Heb_Calendar_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-
+		$this->load_dependencies();
+		
 	}
 
 	/**
@@ -76,4 +77,24 @@ class Heb_Calendar_Admin {
 
 	}
 
+	/**
+     * Load the required dependencies for the Admin facing functionality.
+     *
+     * Include the following files for admin:
+     *
+     * Registers the admin settings and page.
+     *
+     *
+     * @since    1.0.0
+     * @access   private
+     */
+    private function load_dependencies() {
+
+        /**
+         * The class responsible for admin settings of the
+         * core plugin.
+         */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) .  'admin/class-heb-calendar-admin-settings.php';
+		
+    }
 }

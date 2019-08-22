@@ -285,6 +285,7 @@ section.main {
     transition: all 0.6s ease-in-out;
     will-change: transform;
     direction: rtl;
+    overflow: auto;
 }
 
 .custom-content-reveal span.custom-content-close {

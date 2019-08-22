@@ -18,7 +18,7 @@
  *
  * @package    Heb_Calendar
  * @subpackage Heb_Calendar/public
- * @author     Yehuda Tiram, Roi Yosef <yehuda@atarimtr.co.il>
+ * @author     Yehuda Tiram <yehuda@atarimtr.co.il>
  */
 class Heb_Calendar_Public {
 
@@ -61,8 +61,15 @@ class Heb_Calendar_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
+		global $post;   
+		$cal_page_arr_options = $this->get_options('heb_calendar_pages_ids');
+		$cal_page_IDs = explode (",", $cal_page_arr_options['heb_calendar_pages_ids']);
+		$cal_page =  in_array($post->ID, $cal_page_IDs );		
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/heb-calendar-public.css', array(), $this->version, 'all' );
+		if( $cal_page ){
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/heb-calendar-public.css', array(), $this->version, 'all' );
+		}
+		
 
 	}
 
@@ -72,18 +79,47 @@ class Heb_Calendar_Public {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/heb-calendar-public.js', array( 'jquery' ), rand( 1, 99999999999 ), false );
-		wp_register_script( 'modernizer-js', plugin_dir_url( __FILE__ ) . '/js/modernizr.custom.63321.js', array('jquery'), rand( 1, 99999999999 ), false );
-		wp_enqueue_script( 'calendario-js', plugin_dir_url( __FILE__ ) . 'js/jquery.calendario.js', array( 'modernizer-js' ), rand( 1, 99999999999 ), false );
-
-		wp_enqueue_script( 'localize-events', plugin_dir_url( __FILE__ ) . 'js/localize-events.js', array(  ), rand( 1, 99999999999 ), false );
 		
-		wp_localize_script( 'localize-events', 'acf_vars', array(
-				'my_localized_var' => get_field( 'events' ),
-			)
-		);
+		global $post;   
+		$cal_page_arr_options = $this->get_options('heb_calendar_pages_ids');
+		$cal_page_IDs = explode (",", $cal_page_arr_options['heb_calendar_pages_ids']);
+		$cal_page =  in_array($post->ID, $cal_page_IDs );		
+
+		if( $cal_page ){
+			//wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/heb-calendar-public.js', array( 'jquery' ), rand( 1, 99999999999 ), false );
+			wp_register_script( 'modernizer-js', plugin_dir_url( __FILE__ ) . '/js/modernizr.custom.63321.js', array('jquery'), rand( 1, 99999999999 ), false );
+			wp_enqueue_script( 'calendario-js', plugin_dir_url( __FILE__ ) . 'js/jquery.calendario.js', array( 'modernizer-js' ), rand( 1, 99999999999 ), false );
+
+			wp_enqueue_script( 'localize-events', plugin_dir_url( __FILE__ ) . 'js/localize-events.js', array(  ), rand( 1, 99999999999 ), false );
+			
+			wp_localize_script( 'localize-events', 'acf_vars', array(
+					'my_localized_var' => get_field( 'events' ),
+				)
+			);			
+		}
+
+
 
 	}
 
+     /**
+     * Options getter
+     * @return array Options, either saved or default ones.
+     */
+    public function get_options()
+    {
+        $options = get_option($this->plugin_name);
+        if (!$options && is_array($this->settings)) {
+            $options = array();
+            foreach ($this->settings as $section => $data) {
+                foreach ($data['fields'] as $field) {
+                    $options[$field['id']] = $field['default'];
+                }
+            }
+
+            add_option($this->plugin_name, $options);
+        }
+
+        return $options;
+    }
 }

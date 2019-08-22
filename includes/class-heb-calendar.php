@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Heb_Calendar
  * @subpackage Heb_Calendar/includes
- * @author     Yehuda Tiram, Roi Yosef <yehuda@atarimtr.co.il>
+ * @author     Yehuda Tiram <yehuda@atarimtr.co.il>
  */
 class Heb_Calendar {
 
@@ -156,6 +156,12 @@ class Heb_Calendar {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+
+		$plugin_settings = new Heb_Calendar_Admin_settings( $this->get_plugin_name(), $this->get_version() );	
+		$this->loader->add_action( 'admin_init', $plugin_settings, 'init' );
+		$this->loader->add_action( 'admin_menu', $plugin_settings, 'add_menu_item' );
+		$plugin_basename = $this->plugin_name . '/' . 'heb-calendar.php';
+		$this->loader->add_filter( 'plugin_action_links_' . $plugin_basename, $plugin_settings, 'add_action_links' );	
 
 	}
 
