@@ -67,7 +67,7 @@ class Heb_Calendar_Public {
 		$cal_page =  in_array($post->ID, $cal_page_IDs );		
 
 		if( $cal_page ){
-			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/heb-calendar-public.css', array(), $this->version, 'all' );
+			wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/heb-calendar-public.css', array(), rand( 1, 99999999999 ), 'all' );
 		}
 		
 

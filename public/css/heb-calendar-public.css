@@ -92,7 +92,7 @@ section.main {
 
 .fc-calendar .fc-row > div,
 .fc-calendar .fc-head > div {
-    float: left;
+    float: right;
     height: 100%;
     width:  14.28%; /* 100% / 7 */
     width: -moz-calc(100%/7);
@@ -394,7 +394,7 @@ section.main {
     left: 50%;
     top: 0px;
     transition: all .2s;
-    color: #ffe01b;
+    color: #b02c42;
 }
 
 .fc-calendar .fc-row > div.fc-today.fc-content:after {
@@ -431,6 +431,7 @@ section.main {
 .fc-calendar .fc-row > .fc-content {
     cursor: pointer;
     transition: all .2s;
+    background-color: #dbf4f4;
 }
 .fc-calendar .fc-row > .fc-content:hover:before {
     color: #a3316f;
